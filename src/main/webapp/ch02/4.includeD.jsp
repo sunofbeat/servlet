@@ -2,3 +2,4 @@
 본문
 <hr>
 <%@ include file='4.footer.jsp' %>
+ 
