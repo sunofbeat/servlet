@@ -1,0 +1,26 @@
+<meta charset='utf-8'/>
+<!-- 스트링배열  -->
+<form action='4.multiOut.jsp'>
+	<fieldset>
+	<!-- 여러개 선택가능 multivalue가 가능 -->
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화		
+	</fieldset>
+	
+	<fieldset>
+	<!-- 라디오는 하나만 선택 가능하다 multivalue가 불가능-->
+		<input type='radio' name='gender' value='male'/>남
+		<input type='radio' name='gender' value='femail'/>여
+	</fieldset>
+	
+	<fieldset>
+		<select name='job' multiple>
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
