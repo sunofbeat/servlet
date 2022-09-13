@@ -1,14 +1,13 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
 <%@ taglib prefix='c' uri='http://java.sun.com/jstl/core' %>
 <%
-	String userId = request.getParameter("userId"); //다른ID와 구분짓기 위해 userId 라고 변수명을 정함
+	String userId = request.getParameter("userId");
 	String pw = request.getParameter("pw");
 	
 	if(userId.equals("java") && pw.equals("java")) {
-		session.setAttribute("userId", userId);
+		session.setAttribute("userId", userId);	
 %>
-			
-		<c:redirect url='main.jsp'/>	
+		<c:redirect url='main.jsp'/>
 <%
 	} else {
 %>
@@ -18,6 +17,3 @@
 <%
 	}
 %>
-
-
-

@@ -4,4 +4,3 @@
 	session.invalidate();
 %>
 <c:redirect url='main.jsp'/>
-<%-- 로스아웃이후 새 업무를 진행해야 하므로 redirect를 쓰는게 적절하다. --%>

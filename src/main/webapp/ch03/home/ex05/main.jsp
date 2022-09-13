@@ -1,16 +1,18 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8'%>
-<%@ taglib prefix='c' uri='http://java.sun.com/jstl/core' %>
-<nav>
-	<a href='login.jsp'>login</a>
-</nav>
-
 <%
-	String msg = request.getParameter("msg");
-	//session.getAttribute("msg");
+	Object userId = session.getAttribute("userId");
+	if(userId == null) {
 %>
-<%= msg != null ? msg : "" %> &nbsp;
-<a href='logout.jsp'>logout</a>
-
+	<a href='login.jsp'>로그인</a>
+<%
+	} else {
+%>
+	<%= userId %>님, 환영합니다. &nbsp;
+	<a href='logout.jsp'>로그아웃</a>
+<%
+	}
+%>
+<%--login했다라는건 session으로 개발한다 --%>
 <%-- 메인에서 로그인 링크를 누르면 로그인 폼으로 이동한다.
 로그인 폼에서, 아이디/암호를 입력하고, 로그인 폼을 제출한다.
 이때, 아이디/암호는 java/java 이다.
