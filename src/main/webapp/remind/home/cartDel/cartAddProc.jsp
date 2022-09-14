@@ -8,10 +8,10 @@
 		
 		Object cartObj = session.getAttribute("cart");
 		if(cartObj == null) {
-			cart = new ArrayList<>();//장바구니 생성
+			cart = new ArrayList<>();
 			session.setAttribute("cart", cart);
 		} else {
-			cart = (List<String>)cartObj; //casting
+			cart = (List<String>)cartObj;
 		}
 		
 		for(String product: products)
@@ -19,7 +19,7 @@
 	} else {
 %>
 		<c:redirect url='main.jsp'>
-			<c:param name='msg' value='장바구니에 담을 물건을 선택하세요.'/>
+			<c:param name='msg' value='장바구니에 담을 물건을 선택하세요'/>
 		</c:redirect>
 <%
 	}
