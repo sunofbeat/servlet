@@ -13,30 +13,6 @@ public class Laborer {
 		this.hireDate = hireDate;
 	}
 
-	public int getLaborerId() {
-		return laborerId;
-	}
-
-	public String getLaborerName() {
-		return laborerName;
-	}
-
-	public LocalDate getHireDate() {
-		return hireDate;
-	}
-
-	public void setLaborerId(int laborerId) {
-		this.laborerId = laborerId;
-	}
-
-	public void setLaborerName(String laborerName) {
-		this.laborerName = laborerName;
-	}
-
-	public void setHireDate(LocalDate hireDate) {
-		this.hireDate = hireDate;
-	}
-	
 	@Override
 	public String toString() {
 		return String.format("%3d %3s %8s", laborerId, laborerName, hireDate);
